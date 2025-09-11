@@ -16,3 +16,9 @@ h2{
     color: #875893;
     text-indent: 30px;
 }
+img{
+    float: left;
+}
+.shadow {
+    text-shadow: 2px 2px 2px rgb(145, 84, 9);
+}
