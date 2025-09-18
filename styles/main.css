@@ -20,7 +20,7 @@ img{
     float: left;
 }
 .shadow {
-    text-shadow: 2px 2px 2px rgb(145, 84, 9);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 main {
     clear: left;
