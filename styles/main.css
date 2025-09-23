@@ -12,6 +12,7 @@ body {
     border-radius: 25px;
     box-shadow: 5px 5px 0 0;
     background-image: url("../images/AX.png");
+    background-position: right;
     background-repeat: repeat-y;
     background-attachment: fixed;
 }
@@ -48,7 +49,7 @@ main h3 {
 }
 main nav {
     margin: 1.5em 2em 1.5em;
-    border: 5px dashed white;
+    border: 5px dashed purple;
     border-radius: 20px;
     box-shadow: 3px 3px 4px 4px turquoise;
     pad: .5em;
