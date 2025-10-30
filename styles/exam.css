@@ -54,6 +54,9 @@ aside {
     margin-left: 100px;
     list-style-type: lower-alpha;
 }
+nav {
+    border-bottom:3px solid blue
+}
 #nav_menu ul { list-style-type: none; }
 #nav_menu ul li { float: left; }
 #nav_menu ul li a {
