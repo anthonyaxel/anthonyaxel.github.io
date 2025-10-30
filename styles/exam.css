@@ -31,6 +31,7 @@ aside {
     position: fixed;
     right:0;
     top: 170px;
+    list-style-type: lower-roman ;
 }
 #nav_menu ul { list-style-type: none; }
 #nav_menu ul li { float: left; }
