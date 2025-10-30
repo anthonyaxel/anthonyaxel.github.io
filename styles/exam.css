@@ -19,6 +19,7 @@ p::first-letter {
 img {
     width: 200px;
     height: auto;
+    float: right;
 }
 article {
     margin: 10px;
