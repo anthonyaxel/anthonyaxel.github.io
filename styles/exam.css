@@ -35,13 +35,13 @@ aside {
     right:0;
     top: 170px;
 }
-aside.roman{
+.roman{
     list-style-type:lower-roman;
 }
-aside.bullet{
+.bullet{
     list-style-type: circle;
 }
-aside.letter{
+.letter{
     list-style-type: lower-alpha;
 }
 #nav_menu ul { list-style-type: none; }
