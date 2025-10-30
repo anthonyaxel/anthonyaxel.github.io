@@ -1,14 +1,16 @@
 body {
     width: 95%;
     margin: 15px auto;
-    background-image: right repeat-y fixed;
-}
+    background-image: url(../images/SHLogo.png);
+    background-repeat: repeat-y;
+    background-position: right;
+
+}   
 h1 {
-    color: blue
+    color:blue
 }
 h2 {
     color:blue
-
 }
 p::first-letter {
     font-size: 200%;
@@ -18,8 +20,8 @@ p::first-letter {
 article {
     border-top: 3px solid blue;
     border-bottom: 3px solid blue;
-    padding: 3px;
-    margin: 3px;
+    padding: 20px;
+    margin: 20px;
     column-count: 3;
     column-gap: 35px;
     column-rule: 3px dashed blue;
