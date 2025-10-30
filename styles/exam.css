@@ -40,7 +40,7 @@ aside {
 }
 .bullet{
     margin-left: 40px;
-    list-style-type: disc;
+    list-style-type: circle;
 }
 .letter{
     margin-left: 100px;
