@@ -7,7 +7,6 @@ body {
 }
 div {
     display: block;
-    border-top: 3px solid blue;
 }   
 h1 {
     color:blue
