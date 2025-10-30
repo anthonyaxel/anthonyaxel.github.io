@@ -15,6 +15,8 @@ p::first-letter {
 article {
     border-top: 3px solid blue;
     border-bottom: 3px solid blue;
+    padding: 3px;
+    margin: 3px;
     column-count: 3;
     column-gap: 35px;
     column-rule: 3px dashed blue;
@@ -40,3 +42,7 @@ aside {
     border-right: 2px solid white; }
 #nav_menu ul li a.lastitem { border-right: none; }
 #nav_menu ul li a.current { color: yellow; }
+
+footer {
+    position: center;
+}
