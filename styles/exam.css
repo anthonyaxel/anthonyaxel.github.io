@@ -20,12 +20,10 @@ img {
     width: 150px;
     height: auto;
 }
-div {
-    display: block;
-}
 article {
     margin: 10px;
     bottom: 10px;
+    border-top: 3px solid blue;
     border-bottom: 3px solid blue; 
     column-count: 3;
     column-gap: 35px;
