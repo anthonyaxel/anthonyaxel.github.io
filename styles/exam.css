@@ -39,11 +39,11 @@ aside {
     list-style-type: upper-roman;
 }
 .bullet{
-    margin-left: 30px;
+    margin-left: 40px;
     list-style-type: disc;
 }
 .letter{
-    margin-left: 80px;
+    margin-left: 100px;
     list-style-type: lower-alpha;
 }
 #nav_menu ul { list-style-type: none; }
