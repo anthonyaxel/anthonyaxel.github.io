@@ -24,6 +24,9 @@ article {
 }
 aside {
     width: 75%;
+    float: right;
+    padding: 20px;
+    background-color: azure;
     position: fixed;
     list-style-type: lower-greek;
 }
