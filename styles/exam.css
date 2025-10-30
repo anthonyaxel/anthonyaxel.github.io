@@ -30,7 +30,8 @@ aside {
     width: 75%;
     float: right;
     padding: 20px;
-    margin-right: 20px;
+    right: 0;
+    top: 170px;
     background-color: rgb(240, 242, 255);
     position: fixed;
     list-style-type: lower-greek;
