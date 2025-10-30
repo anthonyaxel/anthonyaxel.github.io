@@ -42,7 +42,7 @@ aside {
     text-align: center;
     display: block;
     width: 175px;
-    padding: 1em 0; /* padding above and below a
+    padding: 1em 1em; /* padding above and below a
     elements */
     text-decoration: none;
     background-color: blue;
