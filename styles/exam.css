@@ -6,7 +6,8 @@ body {
     background-position: right;
 }
 div {
-
+    display: inline-block;
+    border-top: 3px solid blue;
 }   
 h1 {
     color:blue
