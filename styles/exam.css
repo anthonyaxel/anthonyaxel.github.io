@@ -1,9 +1,24 @@
+html {
+
+}
 body {
     width: 95%;
     margin: 15px auto;
     background-image: right repeat-y fixed;
 }
+h2 {
+    color:blue
+
+}
+p::first-letter {
+     font-size: 200%;
+     font-weight: bold;
+     font-style: italic
+}
 article {
+    column-count: 3;
+    column-gap: 35px;
+    column-rule: 3px dashed blue;
     width: 75%;
 }
 aside {
