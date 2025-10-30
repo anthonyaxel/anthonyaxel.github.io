@@ -22,7 +22,7 @@ p::first-letter {
 }
 img {
     width: 20px;
-    height: 20px;
+    height: auto;
 }
 article {
     margin: 10px;
