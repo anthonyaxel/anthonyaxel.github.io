@@ -4,6 +4,9 @@ body {
     background-image: url(../images/SHLogo.png);
     background-repeat: repeat-y;
     background-position: right;
+}
+div {
+
 }   
 h1 {
     color:blue
@@ -17,9 +20,8 @@ p::first-letter {
     font-style: italic
 }
 img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
+    width: 100px;
+    height: 100px;
 }
 article {
     margin: 10px;
