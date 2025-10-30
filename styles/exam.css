@@ -28,13 +28,11 @@ article {
 }
 aside {
     width: 75%;
-    float: right;
     padding: 20px;
-    right: 0;
-    top: 170px;
-    background-color: rgb(240, 242, 255);
+    background-color: yellow;
     position: fixed;
-    list-style-type: lower-greek;
+    right:0;
+    top: 170px;
 }
 #nav_menu ul { list-style-type: none; }
 #nav_menu ul li { float: left; }
