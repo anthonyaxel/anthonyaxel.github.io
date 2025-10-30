@@ -8,11 +8,13 @@ h2 {
 
 }
 p::first-letter {
-     font-size: 200%;
-     font-weight: bold;
-     font-style: italic
+    font-size: 200%;
+    font-weight: bold;
+    font-style: italic
 }
 article {
+    border-top: 3px solid blue;
+    border-bottom: 3px solid blue;
     column-count: 3;
     column-gap: 35px;
     column-rule: 3px dashed blue;
