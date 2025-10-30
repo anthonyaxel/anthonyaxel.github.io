@@ -26,7 +26,6 @@ div {
 article {
     margin: 10px;
     bottom: 10px;
-    border-top: 3px solid blue;
     border-bottom: 3px solid blue; 
     column-count: 3;
     column-gap: 35px;
