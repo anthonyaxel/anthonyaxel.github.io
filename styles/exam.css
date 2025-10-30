@@ -4,7 +4,6 @@ body {
     background-image: url(../images/SHLogo.png);
     background-repeat: repeat-y;
     background-position: right;
-
 }   
 h1 {
     color:blue
@@ -30,7 +29,7 @@ aside {
     float: right;
     padding: 20px;
     margin-right: 20px;
-    background-color: azure;
+    background-color: rgb(240, 242, 255);
     position: fixed;
     list-style-type: lower-greek;
 }
