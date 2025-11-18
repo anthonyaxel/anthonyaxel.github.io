@@ -99,7 +99,7 @@ footer {
     text-align: center;
     font-size: .8em;
 }
-menu-button-container {
+.menu-button-container {
 display: flex;
 }
 .menu {
