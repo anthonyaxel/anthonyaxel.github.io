@@ -126,7 +126,7 @@ a:hover {
     text-shadow: none;
 }
 img {
-    size-adjust: inherit;
+    size: 50px;;
 }
 
 /* --- Product Grid --- */
