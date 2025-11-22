@@ -26,6 +26,8 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-heading);
+    font-weight: 400;
+    font-style: normal;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--color-accent-neon);
