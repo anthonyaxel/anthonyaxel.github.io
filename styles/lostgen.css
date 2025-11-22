@@ -61,9 +61,9 @@ a:hover {
 
 .logo {
     font-size: 2.5em;
-    font-family: var(--font-body);
-    color: var(--color-accent-alt); /* Use the secondary neon color */
-    text-shadow: 0 0 10px var(--color-accent-alt);
+    font-family: var(--font-heading);
+    color: var(--color-accent-neon); /* Use the secondary neon color */
+    text-shadow: 0 0 10px var(--color-accent-neon);
 }
 
 .main-nav ul {
