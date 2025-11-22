@@ -61,7 +61,7 @@ a:hover {
 
 .logo {
     font-size: 400;
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     color: var(--color-accent-alt); /* Use the secondary neon color */
     text-shadow: 0 0 10px var(--color-accent-alt);
 }
