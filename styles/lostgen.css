@@ -76,7 +76,7 @@ a:hover {
 /* --- Hero Section (Main Banner) --- */
 .hero-section {
     height: 90vh; /* Takes up most of the viewport height */
-    background: url("../images/istockphoto-846704716-640_adpp_is.mp4") center/cover no-repeat;
+    background: url("../images/wave.jpeg" ) no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
