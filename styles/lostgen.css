@@ -125,6 +125,9 @@ a:hover {
     /* Remove hover text-shadow inherited from 'a' */
     text-shadow: none;
 }
+img {
+    size-adjust: inherit;
+}
 
 /* --- Product Grid --- */
 .product-grid {
