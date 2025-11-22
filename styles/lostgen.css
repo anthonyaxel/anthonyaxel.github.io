@@ -5,8 +5,8 @@
     --color-accent-neon: rgb(43, 239, 43); 
     --color-accent-alt: #ff00ff; /* Magenta Neon */
     --color-card-bg: #1a1a1a;
-    --font-heading: 'league-gothic', sans-serif;
-    --font-body: 'league-gothic', sans-serif;
+    --font-heading: 'Jacquard 12 Charted', system-ui;
+    --font-body: 'Science Gothic', sans-serif;
 }
 
 /* Global Reset and Base Styles */
