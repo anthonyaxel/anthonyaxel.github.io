@@ -16,7 +16,7 @@
     box-sizing: border-box;
 }
 html {
-    background-image: url(../images/slime.jpeg) fixed;
+    background-image: url(../images/slime.jpeg);
 }
 
 body {
