@@ -6,7 +6,7 @@
     --color-accent-alt: #ff00ff; /* Magenta Neon */
     --color-card-bg: #1a1a1a;
     --font-heading: 'league-gothic', sans-serif;
-    --font-body: 'Gothic', sans-serif;
+    --font-body: 'league-gothic', sans-serif;
 }
 
 /* Global Reset and Base Styles */
