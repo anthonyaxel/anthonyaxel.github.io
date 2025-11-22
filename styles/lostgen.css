@@ -19,7 +19,7 @@
 body {
     font-family: var(--font-body);
     color: var(--color-text-primary);
-    background-image: url(../images/istockphoto-846704716-640_adpp_is.mp4) fixed;
+    background-image: url(../images/slime.jpeg) fixed;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
