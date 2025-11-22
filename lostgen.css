@@ -1,0 +1,199 @@
+/* Custom Properties for easy color changes */
+:root {
+    --color-background: #0a0a0a; /* Deep Black */
+    --color-text-primary: #f0f0f0; /* Off-White */
+    --color-accent-neon: #00ffff; /* Aqua Neon */
+    --color-accent-alt: #ff00ff; /* Magenta Neon */
+    --color-card-bg: #1a1a1a;
+    --font-heading: 'Bebas Neue', sans-serif;
+    --font-body: 'Oswald', sans-serif;
+}
+
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-accent-neon);
+    text-shadow: 0 0 5px var(--color-accent-neon); /* Neon Glow */
+}
+
+a {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+    color: var(--color-accent-neon);
+    text-shadow: 0 0 8px var(--color-accent-neon);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.9); /* Slightly transparent for the dark vibe */
+    border-bottom: 2px solid var(--color-accent-neon);
+    box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+.logo {
+    font-size: 2.5em;
+    font-family: var(--font-heading);
+    color: var(--color-accent-alt); /* Use the secondary neon color */
+    text-shadow: 0 0 10px var(--color-accent-alt);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+/* --- Hero Section (Main Banner) --- */
+.hero-section {
+    height: 90vh; /* Takes up most of the viewport height */
+    background: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=GRIT+AND+GLORY+BACKGROUND') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* Adding a dark overlay for contrast and grit */
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border: 3px solid var(--color-accent-neon);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-accent-neon);
+}
+
+.hero-content h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    color: var(--color-accent-alt); /* Highlight the main header */
+    text-shadow: 0 0 15px var(--color-accent-alt);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--color-text-primary);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-accent-neon);
+    color: var(--color-background);
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 0 10px var(--color-accent-neon);
+}
+
+.cta-button:hover {
+    background-color: var(--color-accent-alt);
+    box-shadow: 0 0 15px var(--color-accent-alt);
+    color: var(--color-background);
+    /* Remove hover text-shadow inherited from 'a' */
+    text-shadow: none;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.product-grid h2 {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-accent-neon);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-accent-alt); /* Alt neon on hover */
+}
+
+.product-image {
+    background-color: #333;
+    height: 300px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #999;
+}
+
+.product-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--color-text-primary);
+    text-shadow: none;
+}
+
+.product-card p {
+    color: var(--color-accent-neon);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+.main-footer {
+    text-align: center;
+    padding: 30px 5%;
+    border-top: 1px solid var(--color-accent-neon);
+    background-color: var(--color-card-bg);
+    font-size: 0.9em;
+    color: #999;
+}
+
+.main-footer a {
+    color: var(--color-text-primary);
+}
+.main-footer a:hover {
+    color: var(--color-accent-alt);
+    text-shadow: 0 0 5px var(--color-accent-alt);
+}
