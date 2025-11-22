@@ -26,10 +26,9 @@ body {
 
 h1, h2, h3 {
     font-family: var(--font-heading);
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--color-accent-neon);
-    text-shadow: 0 0 5px var(--color-accent-neon); /* Neon Glow */
 }
 
 a {
