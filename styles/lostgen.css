@@ -2,11 +2,11 @@
 :root {
     --color-background: #0a0a0a; /* Deep Black */
     --color-text-primary: #f0f0f0; /* Off-White */
-    --color-accent-neon: #00ffff; /* Aqua Neon */
+    --color-accent-neon: rgb(43, 239, 43); 
     --color-accent-alt: #ff00ff; /* Magenta Neon */
     --color-card-bg: #1a1a1a;
-    --font-heading: 'Bebas Neue', sans-serif;
-    --font-body: 'Oswald', sans-serif;
+    --font-heading: 'league-gothic', sans-serif;
+    --font-body: 'Gothic', sans-serif;
 }
 
 /* Global Reset and Base Styles */
