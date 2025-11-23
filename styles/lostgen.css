@@ -64,7 +64,7 @@ a:hover {
     font-size: 2.8em;
     font-family: var(--font-heading);
     color: var(--color-accent-alt);
-    text-shadow: 0 0 10px var(--color-text-primary);
+    text-shadow: 0 0 10px var(--color-background);
 }
 
 .main-nav ul {
