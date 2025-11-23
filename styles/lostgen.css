@@ -5,7 +5,7 @@
     --color-accent-neon: rgb(43, 239, 43); 
     --color-accent-alt: #ff00ff; /* Magenta Neon */
     --color-card-bg: #1a1a1a;
-    --font-heading: 'Jacquard 12 Charted', system-ui;
+    --font-heading: 'Jacquard 12', system-ui;
     --font-body: 'Science Gothic', sans-serif;
 }
 
