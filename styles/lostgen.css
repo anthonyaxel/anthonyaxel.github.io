@@ -109,7 +109,9 @@ a:hover {
     color: var(--color-text-primary);
 }
 
-.hero-image
+.hero-image {
+    size-adjust: inherit;
+}
 
 .cta-button {
     display: inline-block;
