@@ -110,7 +110,7 @@ a:hover {
 }
 
 .hero-image {
-    size-adjust: inherit;
+    size: 2px;
 }
 
 .cta-button {
