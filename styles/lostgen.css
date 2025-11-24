@@ -110,8 +110,8 @@ a:hover {
 }
 
 .hero-image {
-    height: fit-content;
-    width: fit-content;
+    height: 20;
+    width: 20;
 }
 
 .cta-button {
