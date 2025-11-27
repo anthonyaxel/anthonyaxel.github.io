@@ -3,7 +3,7 @@
             --color-background: #0a0a0a; 
             --color-text-primary: #f0f0f0; 
             --color-accent-neon: #f0f0f0;
-            --color-accent-alt:#f0f0f0; 
+            --color-accent-alt: rgb(43, 239, 43); 
             --color-card-bg: #1a1a1a;
             --font-heading: 'Jacquard 12 Charted', system-ui;
             --font-subheading: 'Jacquard 12', system-ui;
