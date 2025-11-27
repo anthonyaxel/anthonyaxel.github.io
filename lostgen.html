@@ -2,17 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOSTGEN.STUDIO</title>
+    <title>LOSTGEN.STUDIO | Shop All</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+12+Charted&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">\
     <link rel="stylesheet" href="styles/lostgen.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Jacquard+12+Charted&family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
         <div class="logo">LOSTGEN . STUDIO</div>
         <nav class="main-nav">
             <ul>
+                <!-- Use hashes for navigation links -->
                 <li><a href="#new-arrivals">New Arrivals</a></li>
-                <li><a href="#shop">Shop All</a></li>
+                <li><a href="#shop-all">Shop All</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#cart">Cart (0)</a></li>
             </ul>
@@ -20,44 +24,157 @@
     </header>
 
     <main>
-        <section class="hero-section">
+        <!-- Home Section (Kept for completeness, linked from Nav) -->
+        <section class="hero-section" id="home">
             <div class="hero-content">
                 <h1>LOST GENEARATION</h1>
-                <p><img class="hero-image"src="../images/9504_purple_flame.png" alt="9504_purple_flame"> Hardest threadz in the H for the H <img class="hero-image" src="../images/9504_purple_flame.png" alt="9504_purple_flame"></p>
-
+                <!-- Using placeholder image URLs -->
+                <p><img class="hero-image" src="https://placehold.co/40x40/920bd1/ffffff?text=FLAME" onerror="this.src='https://placehold.co/40x40/920bd1/ffffff?text=X'" alt="Purple Flame Icon"> Hardest threadz in the H for the H <img class="hero-image" src="https://placehold.co/40x40/920bd1/ffffff?text=FLAME" onerror="this.src='https://placehold.co/40x40/920bd1/ffffff?text=X'" alt="Purple Flame Icon"></p>
                 <a href="#new-arrivals" class="cta-button">SHOP THE DROP</a>
             </div>
         </section>
 
+        <!-- New Arrivals Section -->
         <section class="product-grid" id="new-arrivals">
             <h2><source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6f8/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6f8/512.gif" alt="🛸" width="32" height="32"> NEW ARRIVALS <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6f8/512.webp" type="image/webp"><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6f8/512.gif" alt="🛸" width="32" height="32"></h2>
             <div class="products-container">
                 <div class="product-card">
-                    <div class="product-image">[Image of product]
-</div>
+                    <div class="product-card-image">[Texans Hatz]</div>
                     <h3>Texans Hatz</h3>
                     <p>$45.00</p>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">[Image of product]
-</div>
+                    <div class="product-card-image">[Chrome Hearts Beanie]</div>
                     <h3>Chrome Hearts Beanie</h3>
                     <p>$35.00</p>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">[Image of product]
-</div>
+                    <div class="product-card-image">[Hellstar Snapback]</div>
                     <h3>Hellstar Snapback</h3>
                     <p>$35.00</p>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
                 </div>
             </div>
         </section>
+        
+        <!-- Shop All Section -->
+        <section class="shop-all" id="shop-all">
+            <h2 class="text-center mb-10">ALL THREADZ: THE ARCHIVE</h2>
+            
+            <div class="shop-layout">
+                <!-- Sidebar/Filters -->
+                <aside class="sidebar">
+                    <h3>Filter by Type</h3>
+                    <div class="filter-group">
+                        <label><input type="checkbox" checked> All Items</label>
+                        <label><input type="checkbox"> Headwear</label>
+                        <label><input type="checkbox"> Tees & Hoodies</label>
+                        <label><input type="checkbox"> Outerwear</label>
+                        <label><input type="checkbox"> Accessories</label>
+                    </div>
+                    
+                    <h3>Filter by Drop</h3>
+                    <div class="filter-group">
+                        <label><input type="checkbox" checked> Latest Drop</label>
+                        <label><input type="checkbox"> Genesis (V.1)</label>
+                        <label><input type="checkbox"> Cyber-Drift (V.2)</label>
+                        <label><input type="checkbox"> Code-Red (V.3)</label>
+                    </div>
+                    
+                    <h3>Price Range</h3>
+                    <div class="filter-group">
+                        <!-- Custom styled range input or simple text input can be added here -->
+                        <p class="text-gray-400">$20 - $150 (Drag to adjust)</p>
+                    </div>
+                </aside>
+                
+                <!-- Main Product Display -->
+                <div class="main-products-display">
+                    <div class="products-container">
+                        <!-- Products from New Arrivals (repeated) -->
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/920bd1?text=HATZ+V.1');">[Texans Hatz]</div>
+                            <h3>Texans Hatz</h3>
+                            <p>$45.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/43ef43?text=BEANIE');">[Chrome Hearts Beanie]</div>
+                            <h3>Chrome Hearts Beanie</h3>
+                            <p>$35.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/920bd1?text=SNAPBACK');">[Hellstar Snapback]</div>
+                            <h3>Hellstar Snapback</h3>
+                            <p>$35.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        
+                        <!-- Additional Products for Shop All -->
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/43ef43?text=V.2+TEE');">[Cyber-Drift T-Shirt]</div>
+                            <h3>Cyber-Drift T-Shirt</h3>
+                            <p>$60.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/920bd1?text=CODE+RED+HOODIE');">[Code-Red Hoodie]</div>
+                            <h3>Code-Red Hoodie</h3>
+                            <p>$95.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/43ef43?text=GLOVES');">[Tactical Gloves]</div>
+                            <h3>Tactical Gloves</h3>
+                            <p>$40.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/920bd1?text=DECON+PANTS');">[Deconstructed Pants]</div>
+                            <h3>Deconstructed Pants</h3>
+                            <p>$120.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/43ef43?text=RING');">[Neon Signet Ring]</div>
+                            <h3>Neon Signet Ring</h3>
+                            <p>$30.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-card-image" style="background-image: url('https://placehold.co/300x300/1a1a1a/920bd1?text=GHOST+TEE');">[Ghost Logo Tee]</div>
+                            <h3>Ghost Logo Tee</h3>
+                            <p>$60.00</p>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Placeholder for About and Cart sections -->
+        <section id="about" class="p-20 text-center">
+             <h2 class="mb-5">ABOUT LOSTGEN.STUDIO</h2>
+             <p class="text-gray-400 max-w-2xl mx-auto">Founded in the shadows of the Houston grid, LOSTGEN.STUDIO is a collective dedicated to crafting hyper-futuristic, deconstructed apparel. We blend technical fabrics with cyberpunk aesthetics, ensuring every piece reflects the energy of the concrete jungle at midnight. This is more than clothing—it's an artifact.</p>
+        </section>
+        
+        <section id="cart" class="p-20 text-center">
+             <h2 class="mb-5">CART (0)</h2>
+             <p class="text-gray-400">Your archive is currently empty. Shop the threadz and unlock the level up.</p>
+        </section>
+        
     </main>
 
     <footer class="main-footer">
         <p>&copy; 2025 LOSTGEN.STUDIO. All Rights Reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/lostgen.studio/">Instagram</a>
+        <div class="social-links mt-2">
+            <!-- Using a standard link for social icon placeholder -->
+            <a href="https://www.instagram.com/lostgen.studio/" class="hover:text-pink-500">
+                Instagram
+            </a>
         </div>
     </footer>
 
