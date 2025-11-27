@@ -55,8 +55,8 @@
         }
 
         a:hover {
-            color: var(--color-accent-neon);
-            text-shadow: 0 0 8px var(--color-accent-alt);
+            color: var(--color-accent-alt);
+            text-shadow: 0 0 8px var(--color-accent-neon);
         }
 
         /* --- Header & Navigation --- */
