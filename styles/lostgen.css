@@ -56,7 +56,7 @@
 
         a:hover {
             color: var(--color-accent-neon);
-            text-shadow: 0 0 8px var(--color-accent-neon);
+            text-shadow: 0 0 8px var(--color-accent-alt);
         }
 
         /* --- Header & Navigation --- */
@@ -117,7 +117,7 @@
         .hero-section {
             height: 90vh; /* Takes up most of the viewport height */
             /* Using a placeholder image for the environment */
-            background: url("https://placehold.co/1920x1080/0d0d0d/43ef43?text=LOSTGEN+STUDIO+BACKDROP" ) center/cover no-repeat;
+            background: url("") center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
