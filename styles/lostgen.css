@@ -24,6 +24,7 @@
             background-image: url('../images/LGS_MainLogo.PNG');
             background-position: left;
             background-size: contain;
+            background-repeat: repeat-y;
             scroll-behavior: smooth;
         }
 
