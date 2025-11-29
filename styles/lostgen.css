@@ -21,10 +21,8 @@
             font-family: var(--font-body);
             /* Corrected: Set default text color to primary white, not background black */
             color: var(--color-text-primary); 
-            background-image: url('../images/LGS_MainLogo.PNG');
-            background-position: left;
-            background-size: contain;
-            background-repeat: repeat-y;
+            background-color: var(--color-background);
+            line-height: 1.6;
             scroll-behavior: smooth;
         }
 
@@ -119,7 +117,7 @@
         .hero-section {
             height: 90vh; /* Takes up most of the viewport height */
             /* Using a placeholder image for the environment */
-            background: url("") center/cover no-repeat;
+            background: url("../images/LGS_MainLogo.PNG") center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
