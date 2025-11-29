@@ -21,7 +21,7 @@
             font-family: var(--font-body);
             /* Corrected: Set default text color to primary white, not background black */
             color: var(--color-text-primary); 
-            background-image: url(LGS_MainLogo.PNG);
+            background-image: url('LGS_MainLogo.PNG');
             background-color: var(--color-background);
             line-height: 1.6;
             scroll-behavior: smooth;
