@@ -1,0 +1,38 @@
+html {
+    background-image: linear-gradient(to left white 0% #8afaf2 100%);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width :90%;
+    background-color: white;
+    margin: 15px auto;
+    padding: 15px 1.5em;
+    border: 3px solid blueviolet;
+    box-shadow: 5px 5px 0 0;
+    background-image: url(../images/cool.jpeg);
+    background-position: right;
+    background-repeat: repeat-y;
+}
+a:focus, a:hover {
+    font-style: italic;
+    color:lightblue;
+    border: 3px blue;
+    border-style: dotted solid;
+}
+h1 {
+    font-size: 175%;
+    color:purple
+}
+h2{
+    font-size: 130;
+    color: #875893;
+    text-indent: 30px;
+}
+img{
+    float: left;
+    margin-left: 2em;
+}
+.shadow {
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
