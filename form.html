@@ -56,15 +56,32 @@
                     <option value="Charter">Charter</option></select>
                 <br>
             <label for="Start_date">Staring Date:</label>
-            <input type="date" name="Start_date" id="Start_date" requried 
+            <input type="date" name="start_date" id="start_date" requried 
                     placeholder="mm/dd/yyyy"
                     pattern="\d{3}[\-]\d{3}[\-]\d{4}"
                     title="mm/dd/yyyy"><br>
             <label for="tickets">Tickets for Guess:</label>
             <input type="text" name="tickets" id="tickets" 
                     autocomplete="on"><br>
-         </fieldset>
-         <fieldset>
+                    
+        </fieldset>
+            <legend>How Did You Hear About Us?</legend>
+            <input type="checkbox" name="option1" id="option1"
+                    value="search_engine">
+            <label for="search_engine">Search Engine</label><br>
+
+            <input type="checkbox" name="option2" id="option2"
+                    value="social_media">
+            <label for="option2">Social Media</label><br>
+
+            <input type="checkbox" name="option3" id="option3"
+                    value="email">
+            <label for="option3">Email</label>
+
+            <input type="checkbox" name="option4" id="option4"
+                    value="friend">
+            <label for="option4">Friend or colleague</label>
+        <fieldset>
 
          </fieldset>
     </form>
