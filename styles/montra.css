@@ -221,7 +221,7 @@ nav ul a:hover {
 }
 
 /* About & Contact */
-.about, .contact {
+.gallary, .contact {
     padding: var(--padding-section);
     text-align: center;
 }
