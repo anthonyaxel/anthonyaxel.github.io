@@ -80,7 +80,7 @@ p {
     color: var(--color-light-text);
 }
 
-/* Header & Navigation (UX, Consistency) */
+/* Header & Navigation */
 header {
     background-color: var(--color-primary);
     color: var(--color-light-text);
@@ -124,14 +124,13 @@ nav ul a:hover {
     color: var(--color-secondary);
 }
 
-/* Hero Section (Engagement, Visual Appeal) */
+/* Hero Section */
 .hero {
-    background-color: #3b6d57; /* A richer green for the hero */
+    background-color: #3b6d57; /* Deep green */
     color: var(--color-light-text);
     text-align: center;
     padding: 100px 20px;
-    /* In a real site, this would use background-image */
-    /* background: url('placeholder-serene-image.jpg') no-repeat center center/cover; */
+    /* background: url('placeholder.jpg') no-repeat center center/cover; */
     min-height: 70vh;
     display: flex;
     justify-content: center;
@@ -150,7 +149,7 @@ nav ul a:hover {
     margin: 0 auto 30px;
 }
 
-/* Service Section (Clarity, Logical Layout) */
+/* Service Section */
 .services {
     padding: var(--padding-section);
     text-align: center;
@@ -192,7 +191,7 @@ nav ul a:hover {
     margin-bottom: 15px;
 }
 
-/* Testimonials (Engagement, Quality) */
+/* Testimonials */
 .testimonials {
     background-color: var(--color-primary);
     padding: var(--padding-section);
@@ -221,7 +220,7 @@ nav ul a:hover {
     margin-top: 10px;
 }
 
-/* About & Contact (Clarity, UX) */
+/* About & Contact */
 .about, .contact {
     padding: var(--padding-section);
     text-align: center;
@@ -243,7 +242,7 @@ nav ul a:hover {
     margin-top: 20px;
 }
 
-/* Footer (Consistency, Clarity) */
+/* Footer */
 footer {
     background-color: var(--color-text);
     color: var(--color-light-text);
@@ -263,7 +262,7 @@ footer a {
     margin-left: 10px;
 }
 
-/* DESIGN: Accessibility (10%) - Responsive Web Design (RWD) */
+/* RWD */
 @media (max-width: 768px) {
     
     /* Navigation Adjustments for Mobile UX */
