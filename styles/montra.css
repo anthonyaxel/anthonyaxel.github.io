@@ -1,12 +1,12 @@
-/* DESIGN: Consistency (CSS Variables) and Visual Appeal (Color Palette) */
+
 :root {
-    --color-primary: #1e3f30; /* Deep Forest Green (Calming, Wellness) */
-    --color-secondary: #c9a96e; /* Soft Gold/Tan (Authentic, Luxurious) */
-    --color-accent: #e5f4e1; /* Pale Mint/Cream (Clean, Relaxing) */
-    --color-text: #333333; /* Dark Grey for readability */
-    --color-light-text: #ffffff; 
+    --color-primary: #1e3f30; /* Deep Forest Green */
+    --color-secondary: #c9a96e; /* Soft Gold/Tan  */
+    --color-accent: #e5f4e1; /* Pale Mint/Cream  */
+    --color-text: #333333; /* Dark Grey  */
+    --color-light-text: #ffffff;  /* White */
     --font-heading: 'Playfair Display', serif; /* Elegant Serif */
-    --font-body: 'Roboto', sans-serif; /* Clean Sans-serif for readability */
+    --font-body: 'Roboto', sans-serif; /* Clean Sans-serif */
     --padding-section: 60px 0;
 }
 
