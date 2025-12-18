@@ -1,0 +1,357 @@
+/*
+Theme Name: Lost
+Author: LakiGarang
+Author URI: https://hostinger.com/tutorials/author/luqman
+Description: A development theme, from static HTML to WordPress
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Custom Properties for easy color changes */
+        :root {
+            --color-background: #0a0a0a; 
+            --color-text-primary: #f0f0f0; 
+            --color-accent-neon: #f0f0f0;
+            --color-accent-alt: rgb(43, 239, 43); 
+            --color-card-bg: #1a1a1a;
+            --font-heading: 'Jacquard 12 Charted', system-ui;
+            --font-subheading: 'Jacquard 12', system-ui;
+            --font-body: 'Science Gothic', sans-serif;
+        }
+
+        /* Global Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            /* Corrected: Set default text color to primary white, not background black */
+            color: var(--color-text-primary); 
+            background-color: var(--color-background);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-subheading);
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--color-accent-neon);
+            text-shadow: 0 0 5px var(--color-accent-neon); /* Neon Glow */
+        }
+        
+        /* Ensure h1 in the Hero section uses the alt color */
+        .hero-content h1 {
+            color: var(--color-accent-alt); /* Highlight the main header */
+            text-shadow: 0 0 15px var(--color-accent-alt);
+        }
+        
+        .product-card h3 {
+            /* Override for product titles to use white for legibility */
+            color: var(--color-text-primary);
+            text-shadow: none;
+        }
+
+        a {
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-accent-alt);
+            text-shadow: 0 0 8px var(--color-accent-neon);
+        }
+
+        /* --- Header & Navigation --- */
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(10, 10, 10, 0.9); /* Slightly transparent for the dark vibe */
+            border-bottom: 2px solid var(--color-accent-neon);
+            box-shadow: 0 0 10px var(--color-accent-neon);
+            /* Responsive adjustments */
+            flex-wrap: wrap; 
+        }
+
+        .logo {
+            font-size: 2em;
+            font-family: var(--font-heading);
+            color: var(--color-accent-alt);
+            text-shadow: 0 0 10px var(--color-background);
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        /* Mobile adjustment for nav */
+        @media (max-width: 768px) {
+            .main-header {
+                justify-content: center;
+                padding-bottom: 10px;
+            }
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .main-nav ul {
+                justify-content: center;
+                gap: 10px;
+            }
+            .main-nav li {
+                margin-left: 0;
+            }
+        }
+
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 25px;
+        }
+
+        /* --- Hero Section (Main Banner) --- */
+        .hero-section {
+            height: 90vh; /* Takes up most of the viewport height */
+            /* Using a placeholder image for the environment */
+            background: url("../images/LGS_MainLogo.PNG") center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            /* Adding a dark overlay for contrast and grit */
+            box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px 60px;
+            border: 3px solid var(--color-accent-neon);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-accent-neon);
+            max-width: 90%;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(3em, 8vw, 5em); /* Responsive font size */
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: clamp(1em, 2vw, 1.2em);
+            margin-bottom: 30px;
+            color: var(--color-text-primary);
+        }
+
+        .hero-image {
+            /* Corrected: Added units for size */
+            height: 40px;
+            width: 40px;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 5px var(--color-accent-alt));
+            display: inline-block;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: var(--color-accent-neon);
+            color: var(--color-background);
+            font-weight: bold;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            border: none;
+            box-shadow: 0 0 10px var(--color-accent-neon);
+            transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-accent-alt);
+            box-shadow: 0 0 15px var(--color-accent-alt);
+            color: var(--color-background);
+            /* Remove hover text-shadow inherited from 'a' */
+            text-shadow: none;
+        }
+        .NA-image {
+            height: 50;
+            width: 50;
+        }
+
+        /* --- Product Grid & Shop All --- */
+        .product-grid {
+            padding: 80px 5%;
+            text-align: center;
+        }
+        
+        .shop-all {
+            padding: 80px 5%;
+        }
+
+        .product-grid h2 {
+            font-size: clamp(2em, 5vw, 3em);
+            margin-bottom: 40px;
+        }
+
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--color-card-bg);
+            border: 1px solid var(--color-accent-neon);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left; /* Align text left within the card */
+            border-radius: 8px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-accent-alt); /* Alt neon on hover */
+        }
+
+        .product-card-image {
+            background-color: #333;
+            height: 300px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            color: #999;
+            border: 1px dashed var(--color-accent-neon);
+            border-radius: 4px;
+            /* Placeholder for image */
+            background-image: url('https://placehold.co/300x300/1a1a1a/43ef43?text=LOSTGEN');
+            background-size: cover;
+            background-position: center;
+            font-family: var(--font-subheading);
+        }
+        
+        .product-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: var(--color-text-primary);
+            text-shadow: none;
+        }
+
+        .product-card p {
+            color: var(--color-accent-neon);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .product-card .add-to-cart {
+            display: block;
+            margin-top: 15px;
+            padding: 10px;
+            text-align: center;
+            background-color: var(--color-accent-alt);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-accent-alt);
+            transition: all 0.3s;
+            box-shadow: 0 0 5px var(--color-accent-alt);
+        }
+        
+        .product-card .add-to-cart:hover {
+            background-color: var(--color-background);
+            box-shadow: 0 0 15px var(--color-accent-alt);
+            color: var(--color-accent-neon);
+            text-shadow: 0 0 5px var(--color-accent-neon);
+        }
+        
+        /* --- Shop All Filters/Sidebar --- */
+        .shop-layout {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            gap: 40px;
+        }
+        
+        .sidebar {
+            background-color: var(--color-card-bg);
+            padding: 20px;
+            border: 1px solid var(--color-accent-neon);
+            border-radius: 8px;
+        }
+        
+        .sidebar h3 {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            color: var(--color-accent-neon);
+            text-shadow: 0 0 3px var(--color-accent-neon);
+        }
+        
+        .filter-group {
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #333;
+            padding-bottom: 15px;
+        }
+        
+        .filter-group:last-child {
+            border-bottom: none;
+        }
+        
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .filter-group label:hover {
+            color: var(--color-accent-alt);
+        }
+        
+        .filter-group input[type="checkbox"] {
+            margin-right: 8px;
+            /* Customizing checkbox style for the theme */
+            accent-color: var(--color-accent-neon);
+            border: 1px solid var(--color-accent-alt);
+            background-color: #222;
+        }
+        
+        /* Mobile layout adjustment for Shop All */
+        @media (max-width: 1024px) {
+            .shop-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                margin-bottom: 20px;
+            }
+        }
+
+
+        /* --- Footer --- */
+        .main-footer {
+            text-align: center;
+            padding: 30px 5%;
+            border-top: 2px solid var(--color-accent-neon);
+            background-color: var(--color-card-bg);
+            font-size: 0.9em;
+            color: #999;
+            box-shadow: 0 0 10px var(--color-accent-neon);
+        }
+
+        .main-footer a {
+            color: var(--color-text-primary);
+            }
+        .main-footer a:hover {
+            color: var(--color-accent-alt);
+            text-shadow: 0 0 5px var(--color-accent-alt);
+        }
