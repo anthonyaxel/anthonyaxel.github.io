@@ -11,9 +11,7 @@
         <nav class="cyber-nav">
             <ul>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#home" class="glitch-link">HOME</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#new-arrivals" class="glitch-link">NEW_ARRIVALS</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#shop-all" class="glitch-link">THE_ARCHIVE</a></li>
-        
+            
                 <li><a href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>" class="glitch-link">IDENTITY_LOG</a></li>
         
                 <li class="cart-menu-item">
