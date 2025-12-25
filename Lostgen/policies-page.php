@@ -16,8 +16,8 @@ get_header(); ?>
         <div class="policy-sidebar">
             <ul class="protocol-list">
                 <li><a href="shipping-policy">[[01] SHIPPING_LOGISTICS></a></li>
-                <li><a href="returns-policy">[02] RETURN_REFUND_POLICY</a></li>
-                <li><a href="privacy-policy">[03] DATA_PRIVACY</a></li>
+                <li><a href="shipping-policy">[02] RETURN_REFUND_POLICY</a></li>
+                <li><a href="shipping-policy">[03] DATA_PRIVACY</a></li>
             </ul>
         </div>
         
