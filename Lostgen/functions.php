@@ -52,3 +52,33 @@ function lostgen_cart_count_fragments( $fragments ) {
     $fragments['span.cart-count-nav'] = ob_get_clean();
     return $fragments;
 }
+
+/**
+ * Cyber-ify WooCommerce Email Subject Lines and Headings
+ */
+add_filter( 'woocommerce_email_subject_new_order', 'lostgen_custom_email_subject', 10, 2 );
+add_filter( 'woocommerce_email_heading_new_order', 'lostgen_custom_email_heading', 10, 2 );
+
+function lostgen_custom_email_subject( $subject, $order ) {
+    return 'UPLINK_ESTABLISHED: Order #' . $order->get_order_number() . ' Received';
+}
+
+function lostgen_custom_email_heading( $heading, $order ) {
+    return 'INVENTORY_RESERVED // AUTH_SUCCESS';
+}
+
+// Change the "Thank you for your order" text
+add_filter( 'gettext', 'lostgen_change_email_text', 20, 3 );
+function lostgen_change_email_text( $translated_text, $text, $domain ) {
+    if ( $domain == 'woocommerce' ) {
+        switch ( $translated_text ) {
+            case 'Thank you for your order. It’s on hold until we confirm that payment has been received.' :
+                $translated_text = 'DATA_RECEIVED. Your acquisition is pending payment verification. Standing by...';
+                break;
+            case 'Your order has been received and is now being processed.' :
+                $translated_text = 'UPLINK_SUCCESS. Your threadz are being pulled from the archive now.';
+                break;
+        }
+    }
+    return $translated_text;
+}
