@@ -34,7 +34,7 @@ function lostgen_rename_account_tabs( $items ) {
     $items['dashboard'] = 'Overview';
     $items['orders']    = 'Acquisitions'; // Was "Orders"
     $items['downloads'] = 'Data_Files';   // Was "Downloads"
-    $items['edit-address'] = 'Drop_Coords'; // Was "Addresses"
+    $items['edit-address'] = 'Coordinates'; // Was "Addresses"
     $items['edit-account'] = 'Profile_Edit';
     $items['customer-logout'] = 'Disconnect';
     return $items;
