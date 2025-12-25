@@ -16,7 +16,7 @@
         
                 <li class="cart-menu-item">
                     <a href="<?php echo wc_get_cart_url(); ?>" class="glitch-link">
-                        CART [<span class="cart-count-nav"><?php echo WC()->cart->get_cart_contents_count(); ?></span>]
+                        ARCHIVE [<span class="cart-count-nav"><?php echo WC()->cart->get_cart_contents_count(); ?></span>]
                     </a>
                 </li>
             </ul>
