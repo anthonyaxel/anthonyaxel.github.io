@@ -13,7 +13,7 @@
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>#home" class="glitch-link">HOME</a></li>
             
                 <li><a href="<?php echo wc_get_page_permalink( 'myaccount' ); ?>" class="glitch-link">IDENTITY_LOG</a></li>
-        
+            
                 <li class="cart-menu-item">
                     <a href="<?php echo wc_get_cart_url(); ?>" class="glitch-link">
                         ARCHIVE [<span class="cart-count-nav"><?php echo WC()->cart->get_cart_contents_count(); ?></span>]
