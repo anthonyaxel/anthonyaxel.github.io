@@ -209,3 +209,31 @@ h1, h2, h3, .woocommerce-loop-product__title, .glitch-title {
     background: #fff !important;
     border-radius: 0 !important;
 }
+
+/* Layout wrapper for the main page */
+.terminal-main-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Sidebar is 300px, content takes the rest */
+    gap: 40px;
+    padding-top: 50px;
+    align-items: start;
+}
+
+/* Ensure the sidebar stays sticky while scrolling the long home page */
+.sidebar-terminal {
+    position: sticky;
+    top: 100px; /* Adjust based on your header height */
+    z-index: 10;
+}
+
+/* Mobile Responsiveness: Stack them on small screens */
+@media (max-width: 1024px) {
+    .terminal-main-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar-terminal {
+        position: static;
+        margin-bottom: 40px;
+    }
+}
