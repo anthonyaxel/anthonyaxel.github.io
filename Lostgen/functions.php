@@ -134,3 +134,15 @@ function lostgen_change_email_text( $translated_text, $text, $domain ) {
     }
     return $translated_text;
 }
+
+function lostgen_register_shop_sidebar() {
+    register_sidebar( array(
+        'name'          => 'Shop Sidebar',
+        'id'            => 'shop-sidebar',
+        'before_widget' => '<div class="widget-terminal %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'lostgen_register_shop_sidebar' );
