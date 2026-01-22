@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomad Nest | Digital Concierge</title>
+    <style>
+        :root {
+            --primary: #2A9D8F; /* Teal */
+            --secondary: #E9C46A; /* Warm Yellow */
+            --dark: #264653; /* Dark Blue/Green */
+            --light: #F4F1DE; /* Off-white */
+            --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 { margin-bottom: 10px; color: var(--primary); }
+        p { color: #666; margin-bottom: 25px; }
+
+        .hidden { display: none; }
+
+        input, select, textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover { background-color: var(--dark); }
+        
+        button.secondary {
+            background-color: transparent;
+            color: var(--dark);
+            border: 2px solid var(--dark);
+        }
+
+        .perk-selection {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .perk-card {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            width: 40%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .perk-card.selected {
+            border-color: var(--secondary);
+            background-color: #fff9e6;
+            transform: scale(1.05);
+        }
+
+        .emoji { font-size: 30px; display: block; margin-bottom: 5px; }
+        
+        .logo { font-size: 40px; margin-bottom: 10px; display: block;}
+
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    
+    <div id="screen-home">
+        <span class="logo">⛺</span>
+        <h1>Nomad Nest</h1>
+        <p>Welcome to your home away from home.</p>
+        <button onclick="navigate('screen-checkin-1')">Check In</button>
+        <button class="secondary" onclick="navigate('screen-checkout-1')">Check Out</button>
+    </div>
+
+    <div id="screen-checkin-1" class="hidden">
+        <h2>Guest Details</h2>
+        <p>Let's get you settled.</p>
+        <input type="text" placeholder="Full Name" id="guestName">
+        <input type="number" placeholder="Length of Stay (Days)" id="stayLength">
+        <div style="text-align: left; width: 90%; margin: 0 auto;">
+            <label style="font-size: 12px; font-weight: bold;">Upload ID Photo</label>
+        </div>
+        <input type="file" accept="image/*">
+        <button onclick="navigate('screen-checkin-2')">Next Step</button>
+        <button class="secondary" onclick="navigate('screen-home')">Back</button>
+    </div>
+
+    <div id="screen-checkin-2" class="hidden">
+        <h2>Choose Your Gift</h2>
+        <p>A little welcome treat, on us.</p>
+        
+        <div class="perk-selection">
+            <div class="perk-card" onclick="selectPerk(this, 'Snack')">
+                <span class="emoji">🍫</span>
+                <strong>Tasty Snack</strong>
+            </div>
+            <div class="perk-card" onclick="selectPerk(this, 'Pokemon')">
+                <span class="emoji">🃏</span>
+                <strong>Pokémon Card</strong>
+            </div>
+        </div>
+
+        <button onclick="finishCheckIn()">Complete Check-In</button>
+    </div>
+
+    <div id="screen-checkin-success" class="hidden">
+        <span class="emoji">✅</span>
+        <h2>You're In!</h2>
+        <p>Welcome, <span id="displayGuestName">Nomad</span>!</p>
+        <div style="background: #f0f0f0; padding: 15px; border-radius: 8px;">
+            <p style="margin:0; font-size: 14px;">Your Room</p>
+            <h1 style="margin: 5px 0;">4B</h1>
+            <p style="margin:0; font-size: 14px;">Access Code: <strong>8921</strong></p>
+        </div>
+        <p style="margin-top: 20px;">Your <strong><span id="displayPerk">gift</span></strong> is waiting on your pillow.</p>
+        <button onclick="navigate('screen-home')">Done</button>
+    </div>
+
+    <div id="screen-checkout-1" class="hidden">
+        <h2>Check Out</h2>
+        <p>We hope you enjoyed your stay.</p>
+        <input type="text" placeholder="Room Number">
+        <select>
+            <option value="" disabled selected>Rate your stay</option>
+            <option value="5">⭐⭐⭐⭐⭐ - Loved it!</option>
+            <option value="4">⭐⭐⭐⭐ - Good</option>
+            <option value="3">⭐⭐⭐ - Okay</option>
+            <option value="2">⭐⭐ - Not great</option>
+            <option value="1">⭐ - Terrible</option>
+        </select>
+        <textarea rows="3" placeholder="Any feedback for us?"></textarea>
+        <button onclick="navigate('screen-checkout-success')">Check Out</button>
+        <button class="secondary" onclick="navigate('screen-home')">Back</button>
+    </div>
+
+    <div id="screen-checkout-success" class="hidden">
+        <span class="emoji">👋</span>
+        <h2>Safe Travels!</h2>
+        <p>Thanks for nesting with us.</p>
+        <button onclick="navigate('screen-home')">Home</button>
+    </div>
+
+</div>
+
+<script>
+    let currentPerk = "Snack";
+
+    function navigate(screenId) {
+        // Hide all screens
+        const screens = document.querySelectorAll('div[id^="screen-"]');
+        screens.forEach(screen => screen.classList.add('hidden'));
+        
+        // Show target screen
+        document.getElementById(screenId).classList.remove('hidden');
+    }
+
+    function selectPerk(element, perkName) {
+        // Remove selected class from all cards
+        document.querySelectorAll('.perk-card').forEach(c => c.classList.remove('selected'));
+        // Add to clicked card
+        element.classList.add('selected');
+        currentPerk = perkName;
+    }
+
+    function finishCheckIn() {
+        const name = document.getElementById('guestName').value;
+        document.getElementById('displayGuestName').innerText = name || "Nomad";
+        document.getElementById('displayPerk').innerText = currentPerk === 'Pokemon' ? "Pokémon Card" : "Tasty Snack";
+        navigate('screen-checkin-success');
+    }
+</script>
+
+</body>
+</html>
