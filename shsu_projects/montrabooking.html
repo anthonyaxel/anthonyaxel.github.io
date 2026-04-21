@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now | Montra Thai Massage</title>
+    <link rel="stylesheet" href="montra.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Specific Styles for Booking UI */
+        .booking-container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        .booking-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        
+        .card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        
+        .square-embed-placeholder { 
+            background: #f9f9f9; 
+            border: 2px dashed #d1b17e; 
+            height: 500px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            text-align: center;
+        }
+
+        .store-item { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding: 15px 0; }
+        .store-item:last-child { border-bottom: none; }
+        
+        .policy-note { font-size: 0.85rem; color: #666; margin-top: 15px; font-style: italic; }
+        
+        @media (max-width: 768px) {
+            .booking-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Montra</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="booking.html" class="active">Book & Shop</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="booking-container">
+        <h2 style="text-align: center; margin-bottom: 30px;">Reserve Your Session</h2>
+        
+        <div class="booking-grid">
+            <section>
+                <div class="card">
+                    <h3>1. Select Your Service</h3>
+                    <p>Appointments are confirmed by our receptionist. No deposit required today.</p>
+                    
+                    <div class="square-embed-placeholder">
+                        <div>
+                            <p><strong>[Square Appointments Widget Integration]</strong></p>
+                            <p>Client chooses service, date, and time here.</p>
+                            <a href="#" class="btn primary-btn">Launch Square Scheduler</a>
+                        </div>
+                    </div>
+                    
+                    <p class="policy-note">* Note: Cancellations within 24 hours are subject to a fee per business policy.</p>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card">
+                    <h3>Massage Essentials</h3>
+                    <p>Add to your wellness routine</p>
+                    
+                    <div class="store-item">
+                        <div>
+                            <strong>Organic Massage Oil</strong>
+                            <p>$25.00</p>
+                        </div>
+                        <button class="btn secondary-btn" style="padding: 5px 15px;">Add</button>
+                    </div>
+
+                    <div class="store-item">
+                        <div>
+                            <strong>E-Gift Card</strong>
+                            <p>Any Amount</p>
+                        </div>
+                        <button class="btn secondary-btn" style="padding: 5px 15px;">Buy</button>
+                    </div>
+
+                    <div class="store-item">
+                        <div>
+                            <strong>Cupping Add-on</strong>
+                            <p>$30.00</p>
+                        </div>
+                        <button class="btn secondary-btn" style="padding: 5px 15px;">Add</button>
+                    </div>
+                </div>
+
+                <div class="card" style="background: #fdf8f0; border: 1px solid #d1b17e;">
+                    <h3>Cart Summary</h3>
+                    <p>Services: (Selected in Step 1)</p>
+                    <p>Products: $0.00</p>
+                    <hr>
+                    <button class="btn primary-btn" style="width: 100%;">Checkout via Square</button>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Montra Thai Massage. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
