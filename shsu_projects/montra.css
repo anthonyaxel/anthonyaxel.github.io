@@ -125,7 +125,7 @@ nav ul a:hover {
 
 /* Hero Section */
 .hero {
-    background-color: pink; /*#3b6d57*/ /* Deep green */
+    background-color: #3b6d57 /* Deep green */
     color: var(--color-light-text);
     text-align: center;
     padding: 100px 20px;
