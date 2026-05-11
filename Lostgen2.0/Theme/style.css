@@ -2,18 +2,13 @@
 Theme Name: CyberCity Woo Theme
 Theme URI: https://example.com
 Author: Your Name
-Author URI: https://example.com
-Description: Cyberpunk graffiti-inspired WooCommerce WordPress theme.
+Description: Cyberpunk graffiti WooCommerce theme
 Version: 1.0
-License: GNU General Public License v2 or later
 Text Domain: cybercity
 */
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #080808;
-    color: #f5f5f5;
-    font-family: 'Segoe UI', sans-serif;
-    overflow-x: hidden;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
 }
