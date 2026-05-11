@@ -1,0 +1,81 @@
+/*
+Theme Name: LostGen Terminal
+Author: LGS Design
+Description: A high-performance streetwear theme for the Lost Generation.
+Version: 1.0
+License: GNU General Public License v2 or later
+*/
+
+:root {
+    --neon-green: #43ef43;
+    --dark-bg: #050505;
+    --card-bg: #111111;
+    --text-main: #f0f0f0;
+    --font-heading: 'Jacquard 12', cursive;
+    --font-mono: 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-main);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.terminal-header {
+    border-bottom: 1px solid var(--neon-green);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-lgs {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--neon-green);
+    text-shadow: 0 0 10px var(--neon-green);
+    text-decoration: none;
+}
+
+/* --- PRODUCT GRID (BIG IMAGES) --- */
+.woocommerce ul.products li.product {
+    background: var(--card-bg) !important;
+    border: 1px solid #222 !important;
+    padding: 15px !important;
+    transition: all 0.3s ease;
+}
+
+.woocommerce ul.products li.product:hover {
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(67, 239, 67, 0.1);
+    transform: translateY(-5px);
+}
+
+.woocommerce ul.products li.product a img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    margin-bottom: 15px !important;
+}
+
+/* --- BUTTONS --- */
+.button.add_to_cart_button, .cta-button, #place_order {
+    background: var(--neon-green) !important;
+    color: #000 !important;
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase;
+    border-radius: 0 !important;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
+    padding: 12px 24px !important;
+    border: none !important;
+}
+
+/* --- SIDEBAR --- */
+.sidebar-terminal {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed var(--neon-green);
+    padding: 20px;
+}
