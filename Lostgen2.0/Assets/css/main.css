@@ -1,0 +1,255 @@
+:root { 
+   --bg: #050505; 
+   --panel: #111; 
+   --neon-pink: #ff00cc; 
+   --neon-blue: #00f7ff; 
+   --neon-purple: #9d00ff; 
+   --text: #ffffff; 
+} 
+ 
+* { 
+   box-sizing: border-box; 
+} 
+ 
+body { 
+   background: 
+       linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9)), 
+       url('../images/city-bg.jpg'); 
+ 
+   background-size: cover; 
+   background-attachment: fixed; 
+   color: var(--text); 
+   font-family: Arial, sans-serif; 
+} 
+ 
+.site-header { 
+   position: sticky; 
+   top: 0; 
+   z-index: 999; 
+ 
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+ 
+   padding: 20px 40px; 
+ 
+   background: rgba(0,0,0,.7); 
+   backdrop-filter: blur(12px); 
+ 
+   border-bottom: 1px solid var(--neon-blue); 
+ 
+   box-shadow: 0 0 20px rgba(0,247,255,.4); 
+} 
+ 
+.logo a { 
+   color: var(--neon-pink); 
+   font-size: 2rem; 
+   text-decoration: none; 
+   font-weight: bold; 
+   letter-spacing: 3px; 
+ 
+   text-shadow: 
+       0 0 10px var(--neon-pink), 
+       0 0 20px var(--neon-pink); 
+} 
+ 
+.main-nav ul { 
+   display: flex; 
+   list-style: none; 
+   gap: 30px; 
+} 
+ 
+.main-nav a { 
+   text-decoration: none; 
+   color: white; 
+   transition: .3s ease; 
+   position: relative; 
+} 
+ 
+.main-nav a:hover { 
+   color: var(--neon-blue); 
+ 
+   text-shadow: 
+       0 0 8px var(--neon-blue), 
+       0 0 20px var(--neon-blue); 
+} 
+ 
+.hero-section { 
+   min-height: 100vh; 
+ 
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+ 
+   text-align: center; 
+   position: relative; 
+} 
+ 
+.hero-overlay { 
+   position: absolute; 
+   inset: 0; 
+ 
+   background: 
+       linear-gradient( 
+           to bottom, 
+           rgba(0,0,0,.3), 
+           rgba(0,0,0,.85) 
+       ); 
+} 
+ 
+.hero-content { 
+   position: relative; 
+   z-index: 10; 
+   max-width: 900px; 
+   padding: 20px; 
+} 
+ 
+.hero-content h1 { 
+   font-size: 5rem; 
+   line-height: 1; 
+   margin-bottom: 20px; 
+ 
+   color: var(--neon-blue); 
+ 
+   text-shadow: 
+       0 0 10px var(--neon-blue), 
+       0 0 30px var(--neon-blue), 
+       0 0 60px var(--neon-purple); 
+} 
+ 
+.hero-content p { 
+   font-size: 1.2rem; 
+   color: #d1d1d1; 
+   margin-bottom: 40px; 
+} 
+ 
+.shop-btn { 
+   display: inline-block; 
+   padding: 16px 40px; 
+ 
+   background: transparent; 
+   border: 2px solid var(--neon-pink); 
+ 
+   color: white; 
+   text-decoration: none; 
+   font-weight: bold; 
+   letter-spacing: 2px; 
+ 
+   transition: .3s ease; 
+ 
+   box-shadow: 
+       0 0 10px var(--neon-pink), 
+       inset 0 0 10px rgba(255,0,204,.3); 
+} 
+ 
+.shop-btn:hover { 
+   background: var(--neon-pink); 
+ 
+   color: black; 
+ 
+   box-shadow: 
+       0 0 20px var(--neon-pink), 
+       0 0 50px var(--neon-pink); 
+} 
+ 
+.featured-products { 
+   padding: 80px 40px; 
+} 
+ 
+.featured-products h2 { 
+   text-align: center; 
+   font-size: 3rem; 
+   margin-bottom: 50px; 
+ 
+   color: var(--neon-purple); 
+ 
+   text-shadow: 
+       0 0 10px var(--neon-purple), 
+       0 0 30px var(--neon-purple); 
+} 
+ 
+.woocommerce ul.products li.product { 
+   background: rgba(15,15,15,.9); 
+   border: 1px solid rgba(255,255,255,.08); 
+ 
+   transition: .3s ease; 
+   padding: 20px; 
+} 
+ 
+.woocommerce ul.products li.product:hover { 
+   transform: translateY(-8px); 
+ 
+   box-shadow: 
+       0 0 15px var(--neon-blue), 
+       0 0 30px rgba(0,247,255,.4); 
+} 
+ 
+.woocommerce ul.products li.product h2, 
+.woocommerce ul.products li.product .price { 
+   color: white; 
+} 
+ 
+.woocommerce a.button { 
+   background: transparent !important; 
+ 
+   border: 1px solid var(--neon-blue); 
+ 
+   color: white !important; 
+ 
+   transition: .3s ease; 
+} 
+ 
+.woocommerce a.button:hover { 
+   background: var(--neon-blue) !important; 
+   color: black !important; 
+} 
+ 
+.site-footer { 
+   position: relative; 
+   padding: 100px 20px; 
+ 
+   background: #030303; 
+   text-align: center; 
+ 
+   border-top: 1px solid var(--neon-purple); 
+} 
+ 
+.footer-content h2 { 
+   color: var(--neon-pink); 
+   font-size: 2.5rem; 
+} 
+ 
+.social-links { 
+   margin-top: 20px; 
+} 
+ 
+.social-links a { 
+   margin: 0 10px; 
+   color: white; 
+   text-decoration: none; 
+} 
+ 
+.social-links a:hover { 
+   color: var(--neon-blue); 
+} 
+ 
+@media (max-width: 768px) { 
+ 
+   .site-header { 
+       flex-direction: column; 
+       gap: 20px; 
+   } 
+ 
+   .main-nav ul { 
+       flex-direction: column; 
+       align-items: center; 
+   } 
+ 
+   .hero-content h1 { 
+       font-size: 3rem; 
+   } 
+ 
+   .featured-products { 
+       padding: 40px 20px; 
+   } 
+} 
