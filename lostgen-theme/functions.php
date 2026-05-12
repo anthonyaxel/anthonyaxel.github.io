@@ -26,12 +26,14 @@ add_action('init', function() {
     ));
 });
 
-// Sidebar Registration
 add_action('widgets_init', function() {
     register_sidebar(array(
-        'name' => 'Shop Sidebar',
-        'id' => 'shop-sidebar',
-        'before_widget' => '<div class="widget-terminal">',
-        'after_widget' => '</div>',
+        'name'          => 'Shop Sidebar',
+        'id'            => 'shop-sidebar',
+        'description'   => 'Add WooCommerce filters here.',
+        'before_widget' => '<div id="%1$s" class="widget-terminal %2$s">', // Ensures unique IDs + your custom class
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
     ));
 });

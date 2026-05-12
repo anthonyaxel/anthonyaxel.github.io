@@ -11,7 +11,7 @@ if ( ! is_active_sidebar( 'shop-sidebar' ) ) {
 
 <aside id="secondary" class="sidebar-terminal">
     <div class="terminal-protocol-header">
-        <span class="blink">[LOGGING_IN...]</span>
+        <span class="blink">Lost.Gen</span>
     </div>
     
     <?php dynamic_sidebar( 'shop-sidebar' ); ?>

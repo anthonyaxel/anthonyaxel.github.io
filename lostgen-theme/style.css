@@ -168,3 +168,64 @@ body {
     color: var(--neon-green);
     border-color: var(--neon-green);
 }
+
+/* --- HIGH-PRIORITY SIDEBAR OVERRIDES --- */
+
+/* 1. Force the Sidebar Container */
+.lostgen-main-wrapper .sidebar-terminal {
+    font-family: var(--font-mono) !important;
+    background: transparent !important;
+    border-right: 1px solid rgba(67, 239, 67, 0.2) !important;
+    padding-right: 25px !important;
+}
+
+/* 2. Style EVERY Widget Title (Price, Categories, Search) */
+.sidebar-terminal .widget-title {
+    font-family: var(--font-heading) !important;
+    color: var(--neon-green) !important;
+    font-size: 1.5rem !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px dashed var(--neon-green) !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+/* 3. Style WooCommerce Lists (Categories, Attributes) */
+.sidebar-terminal ul, 
+.sidebar-terminal ul.product-categories {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.sidebar-terminal ul li {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #1a1a1a !important;
+    color: #888 !important;
+    font-size: 0.9rem !important;
+}
+
+/* 4. Link Hover Effects */
+.sidebar-terminal ul li a {
+    color: #888 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.sidebar-terminal ul li a:hover {
+    color: var(--neon-green) !important;
+    padding-left: 8px !important; /* Visual "slide-in" effect */
+}
+
+/* 5. Fix for WooCommerce Price Filter Text */
+.sidebar-terminal .price_slider_amount,
+.sidebar-terminal .price_label {
+    color: var(--neon-white) !important;
+    font-size: 12px !important;
+}
+
+.sidebar-terminal .ui-slider-handle {
+    background: var(--neon-green) !important;
+    border-radius: 0 !important; /* Cyberpunk sharp edges */
+}
