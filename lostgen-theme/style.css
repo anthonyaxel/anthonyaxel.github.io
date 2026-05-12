@@ -143,3 +143,28 @@ body {
 .price_slider_wrapper .ui-slider-range {
     background: var(--neon-green) !important;
 }
+
+/* --- TERMINAL PAGINATION --- */
+.terminal-pagination .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.terminal-pagination .page-numbers {
+    color: var(--neon-white);
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #333;
+}
+
+.terminal-pagination .page-numbers.current {
+    background: var(--neon-green);
+    color: #000;
+    border-color: var(--neon-green);
+    box-shadow: 0 0 10px rgba(67, 239, 67, 0.3);
+}
+
+.terminal-pagination .page-numbers:hover:not(.current) {
+    color: var(--neon-green);
+    border-color: var(--neon-green);
+}
