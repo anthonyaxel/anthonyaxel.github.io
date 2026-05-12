@@ -37,3 +37,45 @@ add_action('widgets_init', function() {
         'after_title'   => '</h3>',
     ));
 });
+
+/**
+ * WIRE FILTERS TO HOMEPAGE SHORTCODES
+ * Forces the [products] shortcode to respect sidebar filter parameters.
+ */
+add_filter( 'woocommerce_shortcode_products_query', 'lostgen_wire_filters_to_home', 10, 3 );
+
+function lostgen_wire_filters_to_home( $query_args, $attributes, $type ) {
+    if ( is_front_page() ) {
+        // Handle Price Filtering
+        if ( isset( $_GET['min_price'] ) ) {
+            $query_args['meta_query'][] = array(
+                'key'     => '_price',
+                'value'   => [esc_attr( $_GET['min_price'] ), esc_attr( $_GET['max_price'] )],
+                'compare' => 'BETWEEN',
+                'type'    => 'NUMERIC',
+            );
+        }
+
+        // Handle Product Category Filtering via URL
+        if ( isset( $_GET['product_cat'] ) ) {
+            $query_args['tax_query'][] = array(
+                'taxonomy' => 'product_cat',
+                'field'    => 'slug',
+                'terms'    => esc_attr( $_GET['product_cat'] ),
+            );
+        }
+
+        // Handle Attribute Filtering (e.g., Color, Size)
+        foreach ( $_GET as $key => $value ) {
+            if ( strpos( $key, 'filter_' ) === 0 ) {
+                $attribute = str_replace( 'filter_', 'pa_', $key );
+                $query_args['tax_query'][] = array(
+                    'taxonomy' => $attribute,
+                    'field'    => 'slug',
+                    'terms'    => explode( ',', esc_attr( $value ) ),
+                );
+            }
+        }
+    }
+    return $query_args;
+}
