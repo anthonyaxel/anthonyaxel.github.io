@@ -79,3 +79,67 @@ body {
     border: 1px dashed var(--neon-green);
     padding: 20px;
 }
+
+/* --- SIDEBAR TERMINAL STYLING --- */
+.sidebar-terminal {
+    font-family: var(--font-mono); /* Monospace for technical data feel */
+    border-left: 2px solid rgba(67, 239, 67, 0.2);
+    padding-left: 25px;
+}
+
+.terminal-protocol-header {
+    font-size: 10px;
+    color: var(--neon-green);
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.widget-terminal, 
+.widget.woocommerce {
+    margin-bottom: 40px;
+}
+
+.widget-title {
+    font-family: var(--font-heading) !important; /* Jacquard 12 for headers */
+    font-size: 1.4rem;
+    color: var(--neon-green);
+    text-transform: uppercase;
+    border-bottom: 1px dashed var(--neon-green);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Sidebar List Styling */
+.sidebar-terminal ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-terminal li {
+    padding: 6px 0;
+    font-size: 0.9rem;
+    color: #888;
+    transition: 0.2s;
+}
+
+.sidebar-terminal li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sidebar-terminal li:hover,
+.sidebar-terminal li a:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+    padding-left: 5px; /* Subtle indent on hover */
+}
+
+/* Specific WooCommerce Widget Fixes */
+.price_slider_wrapper .ui-widget-content {
+    background: #222 !important;
+}
+
+.price_slider_wrapper .ui-slider-range {
+    background: var(--neon-green) !important;
+}
