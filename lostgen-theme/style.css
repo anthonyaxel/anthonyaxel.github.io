@@ -285,3 +285,38 @@ body {
     color: var(--neon-green) !important;
     font-family: var(--font-mono) !important;
 }
+
+/* --- FORCE SIDE-BY-SIDE LAYOUT --- */
+.lostgen-main-wrapper {
+    display: flex !important;
+    flex-direction: row !important; /* Forces side-by-side */
+    align-items: flex-start !important;
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+/* Fix Sidebar Width */
+.sidebar-terminal {
+    width: 280px !important;
+    min-width: 280px !important;
+    flex-shrink: 0 !important; /* Prevents sidebar from collapsing */
+}
+
+/* Fix Product Area Width */
+.terminal-content-area {
+    flex-grow: 1 !important;
+    min-width: 0 !important; /* Critical for grid stability inside flex containers */
+}
+
+/* Responsive: Stack only on mobile */
+@media (max-width: 900px) {
+    .lostgen-main-wrapper {
+        flex-direction: column !important;
+    }
+    .sidebar-terminal {
+        width: 100% !important;
+    }
+}
