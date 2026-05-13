@@ -11,7 +11,10 @@ function lostgen_theme_setup() {
 add_action('after_setup_theme', 'lostgen_theme_setup');
 
 function lostgen_enqueue_assets() {
-    wp_enqueue_style('lostgen-style', get_stylesheet_uri());
+    // We're adding a version number (time) to force the browser to stop using old cached versions
+    wp_enqueue_style('lostgen-style', get_template_directory_uri() . '/style.css', array(), time());
+    
+    // Cyber-font uplink
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
 }
 add_action('wp_enqueue_scripts', 'lostgen_enqueue_assets');
