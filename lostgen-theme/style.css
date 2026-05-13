@@ -229,3 +229,39 @@ body {
     background: var(--neon-green) !important;
     border-radius: 0 !important; /* Cyberpunk sharp edges */
 }
+
+/* FORCE GRID ALIGNMENT */
+.lostgen-main-wrapper {
+    display: flex !important; /* Flex is more reliable than Grid for simple sidebars */
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sidebar Width Fix */
+.sidebar-terminal {
+    flex: 0 0 280px !important; /* Locks sidebar at 280px wide */
+    min-width: 280px;
+    order: 1; /* Sidebar on the left */
+}
+
+/* Main Content Width Fix */
+.terminal-content-area {
+    flex: 1 !important;
+    order: 2; /* Content on the right */
+    min-width: 0; /* Prevents overflow */
+}
+
+/* Mobile Responsiveness: Stack them on small screens */
+@media (max-width: 768px) {
+    .lostgen-main-wrapper {
+        flex-direction: column !important;
+    }
+    .sidebar-terminal {
+        width: 100% !important;
+        flex: none !important;
+    }
+}
