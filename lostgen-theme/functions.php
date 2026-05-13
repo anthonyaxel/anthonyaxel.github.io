@@ -79,3 +79,11 @@ function lostgen_wire_filters_to_home( $query_args, $attributes, $type ) {
     }
     return $query_args;
 }
+
+add_action('init', 'lostgen_flush_rewrites');
+function lostgen_flush_rewrites() {
+    if (get_option('lostgen_setup_finished') !== 'yes') {
+        flush_rewrite_rules();
+        update_option('lostgen_setup_finished', 'yes');
+    }
+}
