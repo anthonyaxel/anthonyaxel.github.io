@@ -265,3 +265,23 @@ body {
         flex: none !important;
     }
 }
+
+/* FORCE WIDGET VISIBILITY */
+.sidebar-terminal .widget, 
+.sidebar-terminal .widget-terminal,
+.sidebar-terminal .woocommerce-widget-layered-nav,
+.sidebar-terminal .woocommerce-widget-price-filter {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Ensure the text inside is not black-on-black */
+.sidebar-terminal .widget-title,
+.sidebar-terminal label,
+.sidebar-terminal li,
+.sidebar-terminal a {
+    color: var(--neon-green) !important;
+    font-family: var(--font-mono) !important;
+}
