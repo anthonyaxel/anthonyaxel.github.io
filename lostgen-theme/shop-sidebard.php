@@ -1,36 +1,18 @@
 <?php
 /**
- * The sidebar containing the shop widget area.
  * Name: sidebar-shop.php
  */
-
-if ( ! is_active_sidebar( 'shop-sidebar' ) ) {
-    return;
-}
 ?>
-
 <aside id="secondary" class="sidebar-terminal">
-    <div class="terminal-protocol-header">
-        <span class="blink">Lost.Gen</span>
-    </div>
-    
-    <?php dynamic_sidebar( 'shop-sidebar' ); ?>
-    
-    <!-- Manual Fallback if no widgets are added in Admin -->
-    <?php if ( ! is_active_sidebar( 'shop-sidebar' ) ) : ?>
+    <!-- This is a test message to confirm the file is actually loading -->
+    <div style="font-size:10px; color:red; margin-bottom:10px;">[DEBUG] SYSTEM_CHECK: SIDEBAR_LOADED</div>
+
+    <?php if ( is_active_sidebar( 'shop-sidebar' ) ) : ?>
+        <?php dynamic_sidebar( 'shop-sidebar' ); ?>
+    <?php else : ?>
         <div class="widget-terminal">
-            <h3 class="widget-title">// CATEGORY_INDEX</h3>
-            <?php
-            wp_list_categories( array(
-                'taxonomy' => 'product_cat',
-                'title_li' => '',
-                'show_count' => true,
-            ) );
-            ?>
+            <h3 class="widget-title">// ERROR: NO_WIDGETS</h3>
+            <p style="font-size:12px;">Go to Appearance > Widgets and drag your filters into "Shop Sidebar".</p>
         </div>
     <?php endif; ?>
-
-    <div class="terminal-footer-bits">
-        <p>RE-LOCK_SYSTEM: ACTIVE</p>
-    </div>
 </aside>
