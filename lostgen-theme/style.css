@@ -6,39 +6,74 @@ Version: 1.0
 License: GNU General Public License v2 or later
 */
 
+/* --- GLOBAL SYSTEM STYLE --- */
 :root {
-    --neon-green: #43ef43;
-    --dark-bg: #050505;
-    --card-bg: #111111;
-    --text-main: #f0f0f0;
     --font-heading: 'Jacquard 12', cursive;
     --font-mono: 'Courier New', monospace;
 }
 
-body {
-    background-color: var(--dark-bg);
-    color: var(--text-main);
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
+/* Streamlined Buttons */
+.button, .cta-button, .add-to-cart {
+    font-family: var(--font-heading) !important;
+    letter-spacing: 1px;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%); /* Aggressive Cyber-Cut */
+    background: var(--neon-green) !important;
+    color: #000 !important;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
-/* --- HEADER & NAVIGATION --- */
+.button:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px var(--neon-green);
+    transform: scale(1.02);
+}
+
+/* Chrome-like 3D Effect for Text */
+.glitch-title, h1, h2 {
+    background: linear-gradient(180deg, #fff 0%, #888 50%, #444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 2px var(--neon-green));
+}
+/* --- STREAMLINED HEADER & NAVIGATION --- */
 .terminal-header {
-    border-bottom: 1px solid var(--neon-green);
-    padding: 20px;
+    border-bottom: 2px solid var(--neon-green);
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(5px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.terminal-header nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 25px;
+    list-style: none;
+    font-family: var(--font-mono); /* Using monospace for data-link feel */
+    text-transform: uppercase;
 }
 
-.logo-lgs {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    color: var(--neon-green);
-    text-shadow: 0 0 10px var(--neon-green);
+.terminal-header nav a {
+    color: var(--neon-white);
     text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    position: relative;
 }
 
+/* Hover "Status" Indicator */
+.terminal-header nav a:hover {
+    color: var(--neon-green);
+    text-shadow: 0 0 8px var(--neon-green);
+}
+
+.terminal-header nav a:hover::before {
+    content: '>'; 
+    color: var(--neon-green);
+    margin-right: 5px;
+}
 /* --- PRODUCT GRID (BIG IMAGES) --- */
 .woocommerce ul.products li.product {
     background: var(--card-bg) !important;
@@ -71,13 +106,6 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 90% 100%, 0 100%);
     padding: 12px 24px !important;
     border: none !important;
-}
-
-/* --- SIDEBAR --- */
-.sidebar-terminal {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px dashed var(--neon-green);
-    padding: 20px;
 }
 
 /* --- SIDEBAR TERMINAL STYLING --- */
