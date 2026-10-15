@@ -1,0 +1,290 @@
+/*
+Theme Name: LostGen Terminal
+Theme URI: https://lostgeneration.studio
+Author: LGS Design
+Description: Complete Custom Streetwear E-commerce Terminal for Lost Generation
+Version: 2.0
+Requires at least: 5.0
+Tested up to: 6.5
+Requires PHP: 7.0
+Text Domain: lostgen
+*/
+
+:root {
+    --neon-green: #43ef43;
+    --neon-white: #ffffff;
+    --dark-bg: #050505;
+    --card-bg: #111111;
+    --glitch-red: #ff003c;
+    --font-heading: 'Jacquard 12', cursive;
+    --font-mono: 'Courier New', monospace;
+}
+
+/* --- CORE RESET --- */
+html, body {
+    background-color: var(--dark-bg) !important;
+    color: var(--neon-white) !important;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.blink { animation: blinker 1.5s linear infinite; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--neon-green); font-weight: normal; margin-top: 0; }
+.glitch-title { font-size: 2.5rem; text-shadow: 0 0 10px var(--neon-green); text-transform: uppercase; }
+
+/* --- HEADER --- */
+.terminal-header {
+    border-bottom: 2px solid var(--neon-green);
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; 
+    z-index: 1000;
+}
+
+.logo-lgs {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--neon-green);
+    text-decoration: none;
+    text-shadow: 0 0 10px var(--neon-green);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img { height: 50px; width: auto; vertical-align: middle; }
+
+.terminal-header nav ul { display: flex; gap: 25px; list-style: none; font-family: var(--font-mono); text-transform: uppercase; margin: 0; padding: 0; }
+.terminal-header nav a { color: var(--neon-white); text-decoration: none; font-size: 0.9rem; transition: 0.3s; position: relative; }
+.terminal-header nav a:hover { color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
+.terminal-header nav a:hover::before { content: '>'; color: var(--neon-green); margin-right: 5px; }
+
+/* --- LAYOUT: SIDE-BY-SIDE FIX --- */
+.terminal-container { width: 100%; overflow-x: hidden; }
+.lostgen-main-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.sidebar-terminal {
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
+    border-right: 1px solid rgba(67, 239, 67, 0.2);
+    padding-right: 20px;
+}
+
+.terminal-content-area {
+    flex: 1 !important;
+    min-width: 0 !important;
+}
+
+/* --- SIDEBAR & WIDGETS --- */
+.widget-title {
+    font-family: var(--font-heading) !important;
+    color: var(--neon-green) !important;
+    font-size: 1.5rem !important;
+    text-transform: uppercase !important;
+    border-bottom: 1px dashed var(--neon-green) !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+}
+
+.sidebar-terminal ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+.sidebar-terminal li { padding: 10px 0 !important; border-bottom: 1px solid #1a1a1a !important; color: #888 !important; font-size: 0.9rem !important; }
+.sidebar-terminal a { color: #888 !important; text-decoration: none !important; transition: all 0.2s ease !important; }
+.sidebar-terminal a:hover { color: var(--neon-green) !important; padding-left: 8px !important; }
+
+.sidebar-terminal .widget, 
+.sidebar-terminal .woocommerce-widget-layered-nav,
+.sidebar-terminal .woocommerce-widget-price-filter {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-bottom: 30px !important;
+}
+
+/* --- WOOCOMMERCE PRODUCT CARDS --- */
+.woocommerce ul.products li.product {
+    background: var(--card-bg) !important;
+    border: 1px solid #222 !important;
+    padding: 15px !important;
+    text-align: center;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce ul.products li.product:hover {
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(67, 239, 67, 0.15), inset 0 0 10px rgba(67, 239, 67, 0.1) !important;
+    transform: translateY(-5px);
+    z-index: 2;
+}
+
+.woocommerce ul.products li.product img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-bottom: 1px solid #222;
+    margin-bottom: 15px !important;
+    transition: filter 0.2s ease-in-out;
+}
+
+.woocommerce ul.products li.product:hover img {
+    filter: drop-shadow(3px 0px 0px var(--glitch-red)) drop-shadow(-3px 0px 0px var(--neon-green));
+}
+
+/* --- CYBER BUTTONS --- */
+.button, .cta-button, .add_to_cart_button, #place_order {
+    background: var(--neon-green) !important;
+    color: #000 !important;
+    font-family: var(--font-mono) !important;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    padding: 12px 24px !important;
+    text-decoration: none;
+    border: none !important;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s ease-in-out;
+    margin-top: 15px;
+}
+
+.button:hover, .cta-button:hover, .add_to_cart_button:hover, #place_order:hover {
+    filter: brightness(1.2);
+    box-shadow: 0 0 15px var(--neon-green);
+    transform: scale(1.02);
+}
+
+/* --- CYBER CHECKOUT FORMS --- */
+.woocommerce-checkout input[type="text"], 
+.woocommerce-checkout input[type="email"], 
+.woocommerce-checkout input[type="tel"], 
+.woocommerce-checkout select, 
+.woocommerce-checkout textarea {
+    background: #111 !important;
+    border: 1px solid #333 !important;
+    color: var(--neon-white) !important;
+    padding: 12px;
+    font-family: var(--font-mono);
+    width: 100%;
+}
+
+.woocommerce-checkout input:focus, .woocommerce-checkout textarea:focus, .woocommerce-checkout select:focus {
+    border-color: var(--neon-green) !important;
+    outline: none;
+    box-shadow: 0 0 5px rgba(67, 239, 67, 0.3);
+}
+
+.woocommerce-checkout label {
+    color: var(--neon-green);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.woocommerce table.shop_table {
+    border: 1px solid #333;
+    border-collapse: collapse;
+    width: 100%;
+    color: var(--neon-white);
+}
+
+.woocommerce table.shop_table th, .woocommerce table.shop_table td {
+    border: 1px solid #333;
+    padding: 15px;
+}
+
+.woocommerce table.shop_table th {
+    background: #111;
+    color: var(--neon-green);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#payment {
+    background: #0a0a0a !important;
+    border: 1px dashed var(--neon-green) !important;
+}
+
+#payment div.payment_box {
+    background: #000 !important;
+    color: #888 !important;
+    border: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .lostgen-main-wrapper { flex-direction: column !important; }
+    .sidebar-terminal { border-right: none; width: 100% !important; flex: none !important; border-bottom: 1px solid var(--neon-green); margin-bottom: 20px; padding-bottom: 20px; }
+}
+
+/* --- RESPONSIVE CHECKOUT GRID ENGINE --- */
+
+.lostgen-checkout-row {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.lostgen-checkout-col {
+    flex: 1;
+    min-width: 300px; /* Prevents overflow clipping on standard mobile platforms */
+}
+
+#order_review {
+    background: #0a0a0a;
+    border: 1px solid #222;
+    padding: 20px;
+}
+
+/* --- MOBILE TARGETED PROTOCOLS (< 768px) --- */
+@media (max-width: 768px) {
+    .lostgen-checkout-row {
+        gap: 20px; /* Tighter layout spacing for smaller displays */
+    }
+    
+    .lostgen-checkout-col {
+        min-width: 100% !important; /* Force layout stack order: Billing on top, Summary underneath */
+    }
+    
+    #order_review {
+        padding: 15px; /* Reclaim valuable viewing area on compact displays */
+    }
+
+    /* Force default half-width form items (like first name/last name) to take up full-width fields on phones */
+    .woocommerce-checkout .form-row-first,
+    .woocommerce-checkout .form-row-last {
+        width: 100% !important;
+        float: none !important;
+        margin-right: 0 !important;
+    }
+
+    /* Stop horizontal structural breaking inside order overview breakdown tables */
+    .woocommerce-checkout-review-order table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Optimize touch targets for checkout input systems */
+    .woocommerce-checkout .input-text {
+        font-size: 16px !important; /* Forces iOS devices away from triggering unwelcome page-zooming anomalies */
+        padding: 14px 10px !important;
+    }
+}
